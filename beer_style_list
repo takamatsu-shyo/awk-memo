@@ -1,0 +1,1 @@
+awk --csv 'NR > 1 { count[]++} END {for (style in count) print  count[style], style}' book/reviews.csv | sort -nr
