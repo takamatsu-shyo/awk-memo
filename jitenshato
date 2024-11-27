@@ -1,0 +1,1 @@
+awk --csv '{box[] +=1; office[] = } END {for (b in box) printf(%stt%st%sn ,office[b], b, box[b])}' data/kanagawa_2022zitensyatou_utf.csv | sort -k3 -nr | head -n 5

@@ -1,0 +1,1 @@
+awk --csv 'NR == 1 { for (i = 1; i <= NF; i++) print i, ; exit}' book/reviews.csv
