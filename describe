@@ -1,0 +1,6 @@
+awk --csv 'NR>1 {price += $2} END {print price/(NR-1) }' stock_prices.csv
+awk --csv 'NR>1 {price += ($2-87.3418)^2} END {print sqrt(price/(NR-2)) }' stock_prices.csv
+awk --csv 'NR>1 {nums[NR] = $2} END {asort(nums); print nums[int(NR/2)] }' stock_prices.csv
+awk --csv 'NR>1 {nums[NR] = $2} END {asort(nums); print nums[1] }' stock_prices.csv
+awk --csv 'NR>1 {nums[NR] = $2} END {asort(nums); print nums[NR-1] }' stock_prices.csv
+
